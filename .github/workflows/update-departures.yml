@@ -3,7 +3,7 @@ name: Update departures
 on:
   workflow_dispatch:
   schedule:
-    - cron: "2-57/5 * * * *"
+    - cron: "3-58/5 * * * *"
 
 concurrency:
   group: update-departures
