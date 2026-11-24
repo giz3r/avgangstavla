@@ -2,6 +2,7 @@
 <html lang="sv">
 <head>
 <meta charset="utf-8">
+<meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Avgångstavla</title>
 <style>
@@ -15,8 +16,10 @@ h2 { margin: 16px 0 8px; font-size: 21px; }
 table { width: 100%; border-collapse: collapse; }
 th, td { text-align: left; padding: 8px 5px; border-bottom: 1px solid #52606b; }
 th { font-size: 14px; color: #c6cdd4; }
-.time, th:last-child { text-align: right; }
+.time, th.time-heading { text-align: right; }
 .time { font-weight: bold; }
+.time-value { display: inline-block; }
+.time-value + .time-value { margin-left: 0.6em; }
 .line { display: inline-block; min-width: 24px; padding: 3px 5px;
         border-radius: 4px; text-align: center; font-weight: bold; }
 @media (orientation: landscape) and (min-width: 760px) {
@@ -90,8 +93,8 @@ th { font-size: 14px; color: #c6cdd4; }
 
     var table = element(stop, "table");
     var head = element(element(table, "thead"), "tr");
-    ["Läge", "Linje", "Mot", "Avgår"].forEach(function (label) {
-      element(head, "th", label).setAttribute("scope", "col");
+    ["Läge", "Linje", "Mot", "Avgår", "Därefter"].forEach(function (label, index) {
+      element(head, "th", label, index >= 3 ? "time-heading" : "").setAttribute("scope", "col");
     });
 
     var body = element(table, "tbody");
@@ -102,12 +105,15 @@ th { font-size: 14px; color: #c6cdd4; }
       badge.style.backgroundColor = color(group.line.backgroundColor, "#dddddd");
       badge.style.color = color(group.line.foregroundColor, "#000000");
       element(row, "td", group.destination);
-      var times = group.times.map(function (departure) {
-        if (departure.cancelled) return "Inställd";
+      var next = element(row, "td", undefined, "time");
+      var later = element(row, "td", undefined, "time");
+      group.times.forEach(function (departure, index) {
         var remaining = departure.time - now;
-        return remaining <= 30000 ? "Nu" : Math.ceil(remaining / 60000) + " min";
+        var label = departure.cancelled ? "Inställd" :
+          (remaining <= 30000 ? "Nu" : Math.ceil(remaining / 60000));
+        if (index > 1) later.appendChild(document.createTextNode(" "));
+        element(index === 0 ? next : later, "span", label, "time-value");
       });
-      element(row, "td", times.join(", "), "time");
     });
   }
 
