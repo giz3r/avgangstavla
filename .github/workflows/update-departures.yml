@@ -5,15 +5,14 @@ on:
   schedule:
     - cron: "2-57/5 * * * *"
 
-permissions:
-  contents: write
-
 concurrency:
   group: update-departures
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Check out main
@@ -38,9 +37,8 @@ jobs:
               os.environ["VASTTRAFIK_CLIENT_ID"],
               os.environ["VASTTRAFIK_CLIENT_SECRET"],
           )
-          departures = fetch()
           Path("departures.json").write_text(
-              json.dumps(departures, ensure_ascii=False, indent=2) + "\n",
+              json.dumps(fetch(), ensure_ascii=False, indent=2) + "\n",
               encoding="utf-8",
           )
           PY
@@ -51,11 +49,33 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add departures.json
 
-          if git diff --cached --quiet; then
-            echo "No changes to departures.json"
-            exit 0
+          if ! git diff --cached --quiet; then
+            git commit -m "Update departure data"
+            git pull --rebase origin main
+            git push origin main
           fi
 
-          git commit -m "Update departure data"
-          git pull --rebase origin main
-          git push origin main
+      - name: Prepare Pages files
+        run: |
+          mkdir -p _site
+          cp index.html departures.json _site/
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
