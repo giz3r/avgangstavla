@@ -14,8 +14,13 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v5
+      - name: Check out main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Fetch departures from Västtrafik
         env:
@@ -45,7 +50,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add departures.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Update departure data"
-            git push
+
+          if git diff --cached --quiet; then
+            echo "No changes to departures.json"
+            exit 0
           fi
+
+          git commit -m "Update departure data"
+          git pull --rebase origin main
+          git push origin main
