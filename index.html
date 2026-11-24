@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Avgångstavla</title>
+<style>
+body { margin: 0; background: #1d242a; color: #fff; font: 18px Arial, sans-serif; }
+.header { text-align: center; padding: 16px 8px 4px; }
+h1 { margin: 0 0 6px; font-size: 26px; }
+h2 { margin: 16px 0 8px; font-size: 21px; }
+#status { margin: 0; color: #c6cdd4; font-size: 14px; }
+#board { padding: 0 8px 16px; }
+.stop { padding: 0 8px; box-sizing: border-box; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: 8px 5px; border-bottom: 1px solid #52606b; }
+th { font-size: 14px; color: #c6cdd4; }
+.time, th:last-child { text-align: right; }
+.time { font-weight: bold; }
+.line { display: inline-block; min-width: 24px; padding: 3px 5px;
+        border-radius: 4px; text-align: center; font-weight: bold; }
+@media (orientation: landscape) and (min-width: 760px) {
+  .stop { float: left; width: 50%; }
+  #board:after { content: ""; display: block; clear: both; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Avgångstavla</h1>
+  <p id="status" role="status">Hämtar avgångar…</p>
+</div>
+<div id="board"></div>
+<script>
+(function () {
+  "use strict";
+  var board = document.getElementById("board");
+  var status = document.getElementById("status");
+
+  function element(parent, tag, text, className) {
+    var node = document.createElement(tag);
+    if (text !== undefined) node.appendChild(document.createTextNode(text));
+    if (className) node.className = className;
+    parent.appendChild(node);
+    return node;
+  }
+
+  function color(value, fallback) {
+    return /^#[0-9a-f]{6}$/i.test(value || "") ? value : fallback;
+  }
+
+  function sortDepartures(departures, now) {
+    var groups = Object.create(null);
+    departures.forEach(function (departure) {
+      var journey = departure.serviceJourney || {};
+      var line = journey.line || {};
+      var label = line.designation || line.name || "–";
+      var destination = (journey.directionDetails || {}).shortDirection || journey.direction || "–";
+      var platform = (departure.stopPoint || {}).platform || "";
+      var timestamp = departure.estimatedTime || departure.estimatedOtherwisePlannedTime || departure.plannedTime;
+      var time = Date.parse((timestamp || "").replace(/(\.\d{3})\d+/, "$1"));
+      if (!isFinite(time) || time < now) return;
+
+      var key = JSON.stringify([platform, label, destination]);
+      if (!groups[key]) {
+        groups[key] = {
+          platform: platform, label: label, destination: destination, line: line, times: []
+        };
+      }
+      groups[key].times.push({ time: time, cancelled: departure.isCancelled });
+    });
+
+    return Object.keys(groups).map(function (key) {
+      var group = groups[key];
+      group.times.sort(function (a, b) { return a.time - b.time; });
+      return group;
+    }).sort(function (a, b) {
+      return a.platform.localeCompare(b.platform) || a.times[0].time - b.times[0].time;
+    });
+  }
+
+  function renderStop(parent, name, departures, now) {
+    var stop = element(parent, "div", undefined, "stop");
+    element(stop, "h2", name);
+    var groups = sortDepartures(departures, now);
+    if (!groups.length) {
+      element(stop, "p", "Inga kommande avgångar i den senaste hämtningen.");
+      return;
+    }
+
+    var table = element(stop, "table");
+    var head = element(element(table, "thead"), "tr");
+    ["Läge", "Linje", "Mot", "Avgår"].forEach(function (label) {
+      element(head, "th", label).setAttribute("scope", "col");
+    });
+
+    var body = element(table, "tbody");
+    groups.forEach(function (group) {
+      var row = element(body, "tr");
+      element(row, "td", group.platform);
+      var badge = element(element(row, "td"), "span", group.label, "line");
+      badge.style.backgroundColor = color(group.line.backgroundColor, "#dddddd");
+      badge.style.color = color(group.line.foregroundColor, "#000000");
+      element(row, "td", group.destination);
+      var times = group.times.map(function (departure) {
+        if (departure.cancelled) return "Inställd";
+        var remaining = departure.time - now;
+        return remaining <= 30000 ? "Nu" : Math.ceil(remaining / 60000) + " min";
+      });
+      element(row, "td", times.join(", "), "time");
+    });
+  }
+
+  function fetchDepartures() {
+    var request = new XMLHttpRequest();
+    request.open("GET", "departures.json?_=" + Date.now(), true);
+    request.timeout = 15000;
+    request.onloadend = function () {
+      try {
+        if (request.status !== 200) throw new Error("HTTP " + request.status);
+        var data = JSON.parse(request.responseText);
+        var now = Date.now();
+        var content = document.createDocumentFragment();
+        Object.keys(data).forEach(function (name) {
+          renderStop(content, name, data[name], now);
+        });
+        board.textContent = "";
+        board.appendChild(content);
+        var updated = request.getResponseHeader("Last-Modified");
+        var sourceTime = updated && Date.parse(updated);
+        status.textContent = sourceTime
+          ? "Data från " + new Date(sourceTime).toLocaleTimeString()
+          : "Visar senaste tillgängliga data";
+      } catch (error) {
+        board.textContent = "";
+        status.textContent = "Kunde inte läsa avgångarna. Försöker igen om 30 sekunder.";
+      }
+      window.setTimeout(fetchDepartures, 30000);
+    };
+    request.send();
+  }
+
+  fetchDepartures();
+}());
+</script>
+</body>
+</html>
