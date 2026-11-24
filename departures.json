@@ -162,6 +162,46 @@
       "isPartCancelled": false
     },
     {
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTc5fDJ8ODB8MjQxMTIwMjYiLCJJIjowfV19",
+      "serviceJourney": {
+        "gid": "9015014506000263",
+        "direction": "Fredriksdal, Påstigning fram",
+        "directionDetails": {
+          "fullDirection": "Fredriksdal, Påstigning fram",
+          "shortDirection": "Fredriksdal",
+          "isFrontEntry": true
+        },
+        "line": {
+          "gid": "9011014506000000",
+          "name": "Buss 60",
+          "shortName": "60",
+          "designation": "60",
+          "backgroundColor": "#ffff50",
+          "foregroundColor": "#0061eb",
+          "borderColor": "#0061eb",
+          "transportMode": "bus",
+          "transportSubMode": "none",
+          "isWheelchairAccessible": true,
+          "isRealtimeJourney": false,
+          "operator": "Nobina",
+          "technicalLineNumber": "5060"
+        }
+      },
+      "stopPoint": {
+        "gid": "9022014001390002",
+        "name": "Bergsprängaregatan, Göteborg",
+        "platform": "B",
+        "latitude": 57.68646723,
+        "longitude": 11.98556635,
+        "stopPointType": "other"
+      },
+      "plannedTime": "2026-11-24T23:07:00.0000000+01:00",
+      "estimatedTime": "2026-11-24T23:10:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-24T23:10:00.0000000+01:00",
+      "isCancelled": false,
+      "isPartCancelled": false
+    },
+    {
       "detailsReference": "eyJUIjpbeyJSIjoiMXw4NjIxfDB8ODB8MjQxMTIwMjYiLCJJIjowfV19",
       "serviceJourney": {
         "gid": "9015014506100216",
@@ -198,46 +238,6 @@
       "plannedTime": "2026-11-24T23:10:00.0000000+01:00",
       "estimatedTime": "2026-11-24T23:10:00.0000000+01:00",
       "estimatedOtherwisePlannedTime": "2026-11-24T23:10:00.0000000+01:00",
-      "isCancelled": false,
-      "isPartCancelled": false
-    },
-    {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTc5fDJ8ODB8MjQxMTIwMjYiLCJJIjowfV19",
-      "serviceJourney": {
-        "gid": "9015014506000263",
-        "direction": "Fredriksdal, Påstigning fram",
-        "directionDetails": {
-          "fullDirection": "Fredriksdal, Påstigning fram",
-          "shortDirection": "Fredriksdal",
-          "isFrontEntry": true
-        },
-        "line": {
-          "gid": "9011014506000000",
-          "name": "Buss 60",
-          "shortName": "60",
-          "designation": "60",
-          "backgroundColor": "#ffff50",
-          "foregroundColor": "#0061eb",
-          "borderColor": "#0061eb",
-          "transportMode": "bus",
-          "transportSubMode": "none",
-          "isWheelchairAccessible": true,
-          "isRealtimeJourney": false,
-          "operator": "Nobina",
-          "technicalLineNumber": "5060"
-        }
-      },
-      "stopPoint": {
-        "gid": "9022014001390002",
-        "name": "Bergsprängaregatan, Göteborg",
-        "platform": "B",
-        "latitude": 57.68646723,
-        "longitude": 11.98556635,
-        "stopPointType": "other"
-      },
-      "plannedTime": "2026-11-24T23:07:00.0000000+01:00",
-      "estimatedTime": "2026-11-24T23:11:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-24T23:11:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
