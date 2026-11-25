@@ -1,9 +1,128 @@
 {
   "Bergsprängaregatan": [
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTczfDMxfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTM4fDE3fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506100117",
+        "gid": "9015014506000192",
+        "direction": "Redbergsplatsen, Påstigning fram",
+        "directionDetails": {
+          "fullDirection": "Redbergsplatsen, Påstigning fram",
+          "shortDirection": "Redbergsplatsen",
+          "isFrontEntry": true
+        },
+        "line": {
+          "gid": "9011014506000000",
+          "name": "Buss 60",
+          "shortName": "60",
+          "designation": "60",
+          "backgroundColor": "#ffff50",
+          "foregroundColor": "#0061eb",
+          "borderColor": "#0061eb",
+          "transportMode": "bus",
+          "transportSubMode": "none",
+          "isWheelchairAccessible": true,
+          "isRealtimeJourney": false,
+          "operator": "Nobina",
+          "technicalLineNumber": "5060"
+        }
+      },
+      "stopPoint": {
+        "gid": "9022014001390001",
+        "name": "Bergsprängaregatan, Göteborg",
+        "platform": "A",
+        "latitude": 57.68631354,
+        "longitude": 11.98552878,
+        "stopPointType": "other"
+      },
+      "plannedTime": "2026-11-25T16:51:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T16:53:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T16:53:00.0000000+01:00",
+      "isCancelled": false,
+      "isPartCancelled": false
+    },
+    {
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc3fDExfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "serviceJourney": {
+        "gid": "9015014506100148",
+        "direction": "Heden, Påstigning fram",
+        "directionDetails": {
+          "fullDirection": "Heden, Påstigning fram",
+          "shortDirection": "Heden",
+          "isFrontEntry": true
+        },
+        "line": {
+          "gid": "9011014506100000",
+          "name": "Buss 61",
+          "shortName": "61",
+          "designation": "61",
+          "backgroundColor": "#ffff50",
+          "foregroundColor": "#0061eb",
+          "borderColor": "#0061eb",
+          "transportMode": "bus",
+          "transportSubMode": "none",
+          "isWheelchairAccessible": true,
+          "isRealtimeJourney": false,
+          "operator": "Nobina",
+          "technicalLineNumber": "5061"
+        }
+      },
+      "stopPoint": {
+        "gid": "9022014001390001",
+        "name": "Bergsprängaregatan, Göteborg",
+        "platform": "A",
+        "latitude": 57.68631354,
+        "longitude": 11.98552878,
+        "stopPointType": "other"
+      },
+      "plannedTime": "2026-11-25T16:53:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T16:53:00.0000000+01:00",
+      "isCancelled": false,
+      "isPartCancelled": false
+    },
+    {
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTM4fDE4fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "serviceJourney": {
+        "gid": "9015014506000194",
+        "direction": "Redbergsplatsen, Påstigning fram",
+        "directionDetails": {
+          "fullDirection": "Redbergsplatsen, Påstigning fram",
+          "shortDirection": "Redbergsplatsen",
+          "isFrontEntry": true
+        },
+        "line": {
+          "gid": "9011014506000000",
+          "name": "Buss 60",
+          "shortName": "60",
+          "designation": "60",
+          "backgroundColor": "#ffff50",
+          "foregroundColor": "#0061eb",
+          "borderColor": "#0061eb",
+          "transportMode": "bus",
+          "transportSubMode": "none",
+          "isWheelchairAccessible": true,
+          "isRealtimeJourney": false,
+          "operator": "Nobina",
+          "technicalLineNumber": "5060"
+        }
+      },
+      "stopPoint": {
+        "gid": "9022014001390001",
+        "name": "Bergsprängaregatan, Göteborg",
+        "platform": "A",
+        "latitude": 57.68631354,
+        "longitude": 11.98552878,
+        "stopPointType": "other"
+      },
+      "plannedTime": "2026-11-25T16:57:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T16:58:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T16:58:00.0000000+01:00",
+      "isCancelled": false,
+      "isPartCancelled": false
+    },
+    {
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc2fDE0fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "serviceJourney": {
+        "gid": "9015014506100151",
         "direction": "Masthugget via Järntorget, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Masthugget via Järntorget, Påstigning fram",
@@ -35,56 +154,16 @@
         "longitude": 11.98556635,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:28:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:29:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:29:00.0000000+01:00",
+      "plannedTime": "2026-11-25T16:49:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:00:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:00:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTMzfDN8ODB8MjUxMTIwMjYiLCJJIjowfV19",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw5NjkxfDZ8ODB8MjUxMTIwMjYiLCJJIjowfV19",
       "serviceJourney": {
-        "gid": "9015014506000148",
-        "direction": "Redbergsplatsen, Påstigning fram",
-        "directionDetails": {
-          "fullDirection": "Redbergsplatsen, Påstigning fram",
-          "shortDirection": "Redbergsplatsen",
-          "isFrontEntry": true
-        },
-        "line": {
-          "gid": "9011014506000000",
-          "name": "Buss 60",
-          "shortName": "60",
-          "designation": "60",
-          "backgroundColor": "#ffff50",
-          "foregroundColor": "#0061eb",
-          "borderColor": "#0061eb",
-          "transportMode": "bus",
-          "transportSubMode": "none",
-          "isWheelchairAccessible": true,
-          "isRealtimeJourney": false,
-          "operator": "Nobina",
-          "technicalLineNumber": "5060"
-        }
-      },
-      "stopPoint": {
-        "gid": "9022014001390001",
-        "name": "Bergsprängaregatan, Göteborg",
-        "platform": "A",
-        "latitude": 57.68631354,
-        "longitude": 11.98552878,
-        "stopPointType": "other"
-      },
-      "plannedTime": "2026-11-25T14:29:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:30:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:30:00.0000000+01:00",
-      "isCancelled": false,
-      "isPartCancelled": false
-    },
-    {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXwyNDc3fDI5fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
-      "serviceJourney": {
-        "gid": "9015014506300116",
+        "gid": "9015014506300150",
         "direction": "Heden, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Heden, Påstigning fram",
@@ -115,16 +194,57 @@
         "longitude": 11.98552878,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:30:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:31:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:31:00.0000000+01:00",
+      "plannedTime": "2026-11-25T16:56:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:01:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:01:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTMwfDM4fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc2fDE1fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506000141",
+        "gid": "9015014506100153",
+        "direction": "Masthugget via Järntorget, Påstigning fram",
+        "directionDetails": {
+          "fullDirection": "Masthugget via Järntorget, Påstigning fram",
+          "shortDirection": "Masthugget",
+          "via": "Järntorget",
+          "isFrontEntry": true
+        },
+        "line": {
+          "gid": "9011014506100000",
+          "name": "Buss 61",
+          "shortName": "61",
+          "designation": "61",
+          "backgroundColor": "#ffff50",
+          "foregroundColor": "#0061eb",
+          "borderColor": "#0061eb",
+          "transportMode": "bus",
+          "transportSubMode": "none",
+          "isWheelchairAccessible": true,
+          "isRealtimeJourney": false,
+          "operator": "Nobina",
+          "technicalLineNumber": "5061"
+        }
+      },
+      "stopPoint": {
+        "gid": "9022014001390002",
+        "name": "Bergsprängaregatan, Göteborg",
+        "platform": "B",
+        "latitude": 57.68646723,
+        "longitude": 11.98556635,
+        "stopPointType": "other"
+      },
+      "plannedTime": "2026-11-25T16:57:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:01:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:01:00.0000000+01:00",
+      "isCancelled": false,
+      "isPartCancelled": false
+    },
+    {
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTM3fDEzfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "serviceJourney": {
+        "gid": "9015014506000183",
         "direction": "Fredriksdal, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Fredriksdal, Påstigning fram",
@@ -155,20 +275,21 @@
         "longitude": 11.98556635,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:29:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:33:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:33:00.0000000+01:00",
+      "plannedTime": "2026-11-25T16:51:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:02:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:02:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw0MDg0fDMyfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw5NjYyfDEyfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506300117",
-        "direction": "Linnéplatsen, Påstigning fram",
+        "gid": "9015014506300151",
+        "direction": "Masthugget via Linnéplatsen, Påstigning fram",
         "directionDetails": {
-          "fullDirection": "Linnéplatsen, Påstigning fram",
-          "shortDirection": "Linnéplatsen",
+          "fullDirection": "Masthugget via Linnéplatsen, Påstigning fram",
+          "shortDirection": "Masthugget",
+          "via": "Linnéplatsen",
           "isFrontEntry": true
         },
         "line": {
@@ -195,16 +316,16 @@
         "longitude": 11.98556635,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:33:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:34:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:34:00.0000000+01:00",
+      "plannedTime": "2026-11-25T16:53:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:03:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:03:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc0fDMwfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc3fDEyfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506100116",
+        "gid": "9015014506100150",
         "direction": "Heden, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Heden, Påstigning fram",
@@ -235,20 +356,20 @@
         "longitude": 11.98552878,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:35:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:36:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:36:00.0000000+01:00",
+      "plannedTime": "2026-11-25T17:01:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:03:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:03:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTMzfDR8ODB8MjUxMTIwMjYiLCJJIjowfV19",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw5MTM3fDE0fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506000150",
-        "direction": "Redbergsplatsen, Påstigning fram",
+        "gid": "9015014506000185",
+        "direction": "Fredriksdal, Påstigning fram",
         "directionDetails": {
-          "fullDirection": "Redbergsplatsen, Påstigning fram",
-          "shortDirection": "Redbergsplatsen",
+          "fullDirection": "Fredriksdal, Påstigning fram",
+          "shortDirection": "Fredriksdal",
           "isFrontEntry": true
         },
         "line": {
@@ -268,47 +389,6 @@
         }
       },
       "stopPoint": {
-        "gid": "9022014001390001",
-        "name": "Bergsprängaregatan, Göteborg",
-        "platform": "A",
-        "latitude": 57.68631354,
-        "longitude": 11.98552878,
-        "stopPointType": "other"
-      },
-      "plannedTime": "2026-11-25T14:37:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:37:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:37:00.0000000+01:00",
-      "isCancelled": false,
-      "isPartCancelled": false
-    },
-    {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTczfDMyfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
-      "serviceJourney": {
-        "gid": "9015014506100119",
-        "direction": "Masthugget via Järntorget, Påstigning fram",
-        "directionDetails": {
-          "fullDirection": "Masthugget via Järntorget, Påstigning fram",
-          "shortDirection": "Masthugget",
-          "via": "Järntorget",
-          "isFrontEntry": true
-        },
-        "line": {
-          "gid": "9011014506100000",
-          "name": "Buss 61",
-          "shortName": "61",
-          "designation": "61",
-          "backgroundColor": "#ffff50",
-          "foregroundColor": "#0061eb",
-          "borderColor": "#0061eb",
-          "transportMode": "bus",
-          "transportSubMode": "none",
-          "isWheelchairAccessible": true,
-          "isRealtimeJourney": false,
-          "operator": "Nobina",
-          "technicalLineNumber": "5061"
-        }
-      },
-      "stopPoint": {
         "gid": "9022014001390002",
         "name": "Bergsprängaregatan, Göteborg",
         "platform": "B",
@@ -316,98 +396,18 @@
         "longitude": 11.98556635,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:38:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:38:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:38:00.0000000+01:00",
-      "isCancelled": false,
-      "isPartCancelled": false
-    },
-    {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXwyNDc3fDMwfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
-      "serviceJourney": {
-        "gid": "9015014506300118",
-        "direction": "Heden, Påstigning fram",
-        "directionDetails": {
-          "fullDirection": "Heden, Påstigning fram",
-          "shortDirection": "Heden",
-          "isFrontEntry": true
-        },
-        "line": {
-          "gid": "9011014506300000",
-          "name": "Buss 63",
-          "shortName": "63",
-          "designation": "63",
-          "backgroundColor": "#ffff50",
-          "foregroundColor": "#0061eb",
-          "borderColor": "#0061eb",
-          "transportMode": "bus",
-          "transportSubMode": "none",
-          "isWheelchairAccessible": true,
-          "isRealtimeJourney": false,
-          "operator": "Nobina",
-          "technicalLineNumber": "5063"
-        }
-      },
-      "stopPoint": {
-        "gid": "9022014001390001",
-        "name": "Bergsprängaregatan, Göteborg",
-        "platform": "A",
-        "latitude": 57.68631354,
-        "longitude": 11.98552878,
-        "stopPointType": "other"
-      },
-      "plannedTime": "2026-11-25T14:40:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:40:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:40:00.0000000+01:00",
-      "isCancelled": false,
-      "isPartCancelled": false
-    },
-    {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw0MDkxfDB8ODB8MjUxMTIwMjYiLCJJIjowfV19",
-      "serviceJourney": {
-        "gid": "9015014506300119",
-        "direction": "Linnéplatsen, Påstigning fram",
-        "directionDetails": {
-          "fullDirection": "Linnéplatsen, Påstigning fram",
-          "shortDirection": "Linnéplatsen",
-          "isFrontEntry": true
-        },
-        "line": {
-          "gid": "9011014506300000",
-          "name": "Buss 63",
-          "shortName": "63",
-          "designation": "63",
-          "backgroundColor": "#ffff50",
-          "foregroundColor": "#0061eb",
-          "borderColor": "#0061eb",
-          "transportMode": "bus",
-          "transportSubMode": "none",
-          "isWheelchairAccessible": true,
-          "isRealtimeJourney": false,
-          "operator": "Nobina",
-          "technicalLineNumber": "5063"
-        }
-      },
-      "stopPoint": {
-        "gid": "9022014001390002",
-        "name": "Bergsprängaregatan, Göteborg",
-        "platform": "B",
-        "latitude": 57.68646723,
-        "longitude": 11.98556635,
-        "stopPointType": "other"
-      },
-      "plannedTime": "2026-11-25T14:44:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:44:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:44:00.0000000+01:00",
+      "plannedTime": "2026-11-25T16:57:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:04:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:04:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     }
   ],
   "Engdahlsgatan": [
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTczfDMxfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc2fDE0fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506100117",
+        "gid": "9015014506100151",
         "direction": "Masthugget via Järntorget, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Masthugget via Järntorget, Påstigning fram",
@@ -439,16 +439,16 @@
         "longitude": 11.98316348,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:28:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:30:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:30:00.0000000+01:00",
+      "plannedTime": "2026-11-25T16:49:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:01:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:01:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc0fDMwfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc3fDEyfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506100116",
+        "gid": "9015014506100150",
         "direction": "Heden, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Heden, Påstigning fram",
@@ -479,16 +479,16 @@
         "longitude": 11.98302021,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:34:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:35:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:35:00.0000000+01:00",
+      "plannedTime": "2026-11-25T17:00:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:01:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:01:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTczfDMyfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc2fDE1fDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506100119",
+        "gid": "9015014506100153",
         "direction": "Masthugget via Järntorget, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Masthugget via Järntorget, Påstigning fram",
@@ -520,16 +520,16 @@
         "longitude": 11.98316348,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:38:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:39:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:39:00.0000000+01:00",
+      "plannedTime": "2026-11-25T16:57:00.0000000+01:00",
+      "estimatedTime": "2026-11-25T17:02:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:02:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     },
     {
-      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc0fDMxfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
+      "detailsReference": "eyJUIjpbeyJSIjoiMXw4NTc3fDEzfDgwfDI1MTEyMDI2IiwiSSI6MH1dfQ",
       "serviceJourney": {
-        "gid": "9015014506100118",
+        "gid": "9015014506100152",
         "direction": "Heden, Påstigning fram",
         "directionDetails": {
           "fullDirection": "Heden, Påstigning fram",
@@ -560,9 +560,8 @@
         "longitude": 11.98302021,
         "stopPointType": "other"
       },
-      "plannedTime": "2026-11-25T14:44:00.0000000+01:00",
-      "estimatedTime": "2026-11-25T14:43:00.0000000+01:00",
-      "estimatedOtherwisePlannedTime": "2026-11-25T14:43:00.0000000+01:00",
+      "plannedTime": "2026-11-25T17:08:00.0000000+01:00",
+      "estimatedOtherwisePlannedTime": "2026-11-25T17:08:00.0000000+01:00",
       "isCancelled": false,
       "isPartCancelled": false
     }
